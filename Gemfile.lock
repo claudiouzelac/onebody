@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/Hermanverschooten/pdf-writer.git
+  remote: https://github.com/Hermanverschooten/pdf-writer.git
   revision: f57c298a2527893acd62430aefc2516e76499633
   specs:
     pdf-writer (1.2.5)
@@ -7,23 +7,23 @@ GIT
       transaction-simple (~> 1.3)
 
 GIT
-  remote: git://github.com/bokmann/font-awesome-rails.git
-  revision: 9af81d72c7ba47035fa536c78eb8772964392d9b
+  remote: https://github.com/bokmann/font-awesome-rails.git
+  revision: e26d8c21e0e5ac542b8c59d503225d14ca3a92c5
   specs:
-    font-awesome-rails (4.1.0.0)
-      railties (>= 3.2, < 5.0)
+    font-awesome-rails (4.7.0.8)
+      railties (>= 3.2, < 8.0)
 
 GIT
-  remote: git://github.com/seven1m/acts_as_taggable_on_steroids.git
-  revision: c7a2ea153930e343b565badf71141681f268127b
+  remote: https://github.com/seven1m/acts_as_taggable_on_steroids.git
+  revision: a4a74dd80d6eb2691c1777ab25fc2b55dcee52c1
   specs:
     acts_as_taggable_on_steroids (1.1)
 
 GIT
-  remote: git://github.com/seven1m/load_and_authorize_resource.git
-  revision: 8d2d3fa29ef1b8ec3087a7cf67ddebdb6ae90d08
+  remote: https://github.com/seven1m/load_and_authorize_resource.git
+  revision: 40f94e88b98c99aa14751ccc7a35737eadb51a75
   specs:
-    load_and_authorize_resource (0.4.0)
+    load_and_authorize_resource (0.4.1)
       rails (>= 4.0)
 
 GEM
@@ -93,9 +93,9 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
-    color (1.7)
+    color (1.8)
     colorize (0.7.3)
-    curb (0.8.5)
+    crass (1.0.6)
     date_validator (0.7.0)
       activemodel (>= 3)
     diff-lcs (1.2.5)
@@ -111,10 +111,15 @@ GEM
     factory_girl_rails (4.4.1)
       factory_girl (~> 4.4.0)
       railties (>= 3.0.0)
-    feedjira (1.2.0)
-      curb (~> 0.8.1)
-      loofah (~> 1.2.1)
-      sax-machine (~> 0.2.1)
+    faraday (0.17.6)
+      multipart-post (>= 1.2, < 3)
+    faraday_middleware (0.14.0)
+      faraday (>= 0.7.4, < 1.0)
+    feedjira (2.2.0)
+      faraday (>= 0.9)
+      faraday_middleware (>= 0.9)
+      loofah (>= 2.0)
+      sax-machine (>= 1.0)
     ffi (1.9.3)
     formatador (0.2.5)
     geocoder (1.2.1)
@@ -140,8 +145,9 @@ GEM
       celluloid (>= 0.15.2)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
-    loofah (1.2.1)
-      nokogiri (>= 1.4.4)
+    loofah (2.19.1)
+      crass (~> 1.0.2)
+      nokogiri (>= 1.5.9)
     lumberjack (1.0.5)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -153,6 +159,7 @@ GEM
     mini_portile (0.5.3)
     minitest (4.7.5)
     multi_json (1.10.1)
+    multipart-post (2.2.0)
     mysql2 (0.3.15)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
@@ -231,8 +238,7 @@ GEM
       sass (~> 3.2.0)
       sprockets (~> 2.8, <= 2.11.0)
       sprockets-rails (~> 2.0)
-    sax-machine (0.2.1)
-      nokogiri (~> 1.6.0)
+    sax-machine (1.3.2)
     shoulda-matchers (2.6.1)
       activesupport (>= 3.0.0)
     slop (3.5.0)
